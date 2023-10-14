@@ -1,0 +1,61 @@
+<div mat-dialog-title>
+    <h1>Employee Form</h1>
+</div>
+<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+      <div class="row">
+          <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input matInput type="text" placeholder="Ex. Luka" formControlName="firstname">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Last Name</mat-label>
+              <input matInput type="text" placeholder="Ex. Chemia" formControlName="lastname">
+            </mat-form-field>
+      </div>
+      <div class="row">
+          <mat-form-field appearance="outline">
+              <mat-label>User Name</mat-label>
+              <input matInput type="text" placeholder="Ex. lchemo"  formControlName="username">
+            </mat-form-field>
+          <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput type="email" placeholder="Ex. lchemo@gmail.com" formControlName="email">
+            </mat-form-field>
+      </div>
+      <div class="row">
+          <mat-form-field appearance="outline">
+              <mat-label>Position</mat-label >
+              <mat-select  [(value)]="selectedPosition"  formControlName="Position">                >
+                <mat-option *ngFor = "let val of position" [value] ="val" >
+                  {{val}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Date of Birth</mat-label>
+              <mat-hint>MM/DD/YYYY</mat-hint>
+              <input matInput [matDatepicker]="picker" formControlName="dateob">
+              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+      </div>
+      <div class="row">
+          <mat-form-field appearance="outline">
+              <mat-label>Password</mat-label>
+              <input matInput type="password" formControlName="password">
+            </mat-form-field>
+            <mat-form-field hintLabel="Max 11 characters">
+              <mat-label>Identification Code</mat-label>
+              <input matInput #input maxlength="11" placeholder="Ex. xxxxxxxxxxx" formControlName="icode">
+              <mat-hint align="end">{{input.value.length}}/11</mat-hint>
+            </mat-form-field>
+      </div>
+  </div>
+
+  <div mat-dialog-actions class="action" >
+      <button mat-raised-button>Cancel</button>
+      <button mat-raised-button color="primary" type="submit">Save</button>
+
+  </div>
+</form>
