@@ -1,0 +1,43 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employees": [
+    {
+      "firstname": "luka",
+      "lastname": "chemia",
+      "username": "luichemo",
+      "email": "luka.chemia001@gmail.com",
+      "Position": "Developer",
+      "dateob": "2002-06-01T19:00:00.000Z",
+      "password": "zauri",
+      "icode": "12345678910",
+      "id": 1
+    },
+    {
+      "firstname": "laura",
+      "lastname": "dimpitauri",
+      "username": "dimpo",
+      "email": "dimpo@gmail.com",
+      "Position": "Support",
+      "dateob": "2023-10-10T20:00:00.000Z",
+      "password": "159753",
+      "icode": "12345245532",
+      "id": 2
+    }
+  ]
+}
