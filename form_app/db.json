@@ -36,8 +36,41 @@
       "Position": "Support",
       "dateob": "2023-10-10T20:00:00.000Z",
       "password": "159753",
-      "icode": "12345245532",
+      "icode": "1234524553",
       "id": 2
+    },
+    {
+      "firstname": "luka",
+      "lastname": "hjbkjfnasdjkn",
+      "username": "jksdbjndefsk",
+      "email": "sjnkjgew@jdbnfsan",
+      "Position": "Designer",
+      "dateob": "2023-11-09T08:00:00.000Z",
+      "password": "159753",
+      "icode": "51515",
+      "id": 3
+    },
+    {
+      "firstname": "adlkf",
+      "lastname": "kjbdsakj",
+      "username": "dimpo",
+      "email": "dskjhfn@sdjnfi",
+      "Position": "Designer",
+      "dateob": "2023-11-03T07:00:00.000Z",
+      "password": "159753",
+      "icode": "123652484",
+      "id": 4
+    },
+    {
+      "firstname": "kl;asdfnu",
+      "lastname": "jdsnfjqa",
+      "username": "dimpo",
+      "email": "ajksdfjn@ksdjbfj",
+      "Position": "Designer",
+      "dateob": "2022-11-11T08:00:00.000Z",
+      "password": "159753",
+      "icode": "125615",
+      "id": 5
     }
   ]
 }

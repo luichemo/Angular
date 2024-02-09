@@ -61,6 +61,7 @@ export class EmpAddEditComponent implements OnInit{
           next: (val: any) => {
             this._coreService.openSnackBar('Employee added successfully');
             this._dialogRef.close(true);
+            window.location.reload();
           },
           error: (err:any) =>{
             console.error(err);

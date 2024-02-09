@@ -1,0 +1,64 @@
+
+nav {
+    background-color: var(--light);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 100%;
+    
+    
+}
+.logo{
+    width: 50%;
+    box-sizing: border-box; 
+    color: var(--text);
+    justify-content: flex-start;
+}
+h2{
+    color: var(--text);
+}
+.routing {
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 0;
+    gap: 30px;
+    width: 50%;
+    box-sizing: border-box;
+}
+li{
+    list-style-type: none; /* Remove bullets */ 
+    text-decoration: none;
+}
+li.active a {
+    color: var(--dark);
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text);
+    transition: color 0.3s, text-shadow 0.3s;
+    outline: none;
+}
+a:hover {
+    color: var(--dark);
+    text-shadow: var(--dark); /* Add a subtle box shadow on hover */
+    
+}
+.d-flex.routing li a.active {
+    color: var(--dark);
+    /* Add any other styles you want for the active link */
+}
+.caroules-wrapper{
+    margin: 0;
+  overflow: hidden;
+}
+.coruImage{
+    width: 100%;
+  
+  max-height: 100vh;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+

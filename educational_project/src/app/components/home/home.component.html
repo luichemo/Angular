@@ -1,0 +1,54 @@
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+<nav class="navBar d-flex">
+    <div class="logo">
+        <a href="index.html" >
+            <h2 class="m-0 "><i class="fa fa-book me-3"></i>eLEARNING</h2>
+        </a>
+    </div>
+    <ul class="d-flex routing" id="myDIV">
+        <li><a href="index.html" class="nav-list ">HOME</a></li>
+        <li><a href="/about.html"class="nav-list" >ABOUT</a></li>
+        <li><a href="courses.html" class="nav-list" >COURSES</a></li>
+        <li><a href="stuff.html" class="nav-list">STUFF</a></li>
+        <li><a href="contact.html" class="nav-list">CONTACT</a></li>
+    </ul>
+    
+
+</nav>
+
+
+<!-- <ngb-carousel>
+
+    <ng-template ngbSlide >
+        
+        @for (image of images; track $index) {
+            <div class="caroules-wrapper">
+                <img src="assets/img/{{image.name}}" >
+            </div>
+        }
+    </ng-template>
+    
+</ngb-carousel> -->
+<div class="caroules-wrapper">
+<ngb-carousel >
+    @if (showCarousel) {
+        #carousel [interval]="1000"
+    }
+    
+    <ng-template ngbSlide>
+        <img src="../../../assets/img/carousel-1.jpg" class="coruImage">
+    </ng-template>
+    <ng-template ngbSlide>
+        <img src="../../../assets/img/carousel-2.jpg" class="coruImage">
+    </ng-template>
+    
+  </ngb-carousel>
+</div>
+  
+
+
+<!-- <div class="carusel_2"><img src="assets/img/carousel-2.jpg" height="100%" width="100%"></div> -->

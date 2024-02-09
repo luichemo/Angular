@@ -1,0 +1,80 @@
+<div class="main-body">
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+  </mat-form-field>
+  
+  <div class="table-container">
+    <table mat-table [dataSource]="dataSource" matSort>
+  
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="firstname">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> First Name </th>
+        <td mat-cell *matCellDef="let row"> {{row.firstname}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="lastname">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </th>
+        <td mat-cell *matCellDef="let row"> {{row.lastname}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="username">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> User Name </th>
+        <td mat-cell *matCellDef="let row"> {{row.username}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+        <td mat-cell *matCellDef="let row"> {{row.email}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="Position">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Position </th>
+        <td mat-cell *matCellDef="let row"> {{row.Position}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="dateob">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Date Of Birth </th>
+        <td mat-cell *matCellDef="let row"> {{row.dateob | date}} </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="password">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Password </th>
+        <td mat-cell *matCellDef="let row"> {{row.password}} </td>
+      </ng-container>
+      
+      
+      <ng-container matColumnDef="icode">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Indefication Code </th>
+        <td mat-cell *matCellDef="let row"> {{row.icode}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Action Code </th>
+        <td mat-cell *matCellDef="let row">
+          <button mat-icon-button color="primary" (click)="openEditForms(row)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn"(click)="deleteEmployee(row.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+      
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+      </tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+  </div>
+</div>

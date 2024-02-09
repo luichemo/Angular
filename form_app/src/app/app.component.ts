@@ -15,6 +15,9 @@ import { CoreService } from './core/core.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   displayedColumns: string[] = [
     'id', 
     'firstname', 
