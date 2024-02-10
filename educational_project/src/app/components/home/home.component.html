@@ -14,25 +14,13 @@ integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2
         <li><a href="/about.html"class="nav-list" >ABOUT</a></li>
         <li><a href="courses.html" class="nav-list" >COURSES</a></li>
         <li><a href="stuff.html" class="nav-list">STUFF</a></li>
-        <li><a href="contact.html" class="nav-list">CONTACT</a></li>
+        <li><a href="contact.html" class="nav-list" >CONTACT</a></li>
+        
     </ul>
     
 
 </nav>
 
-
-<!-- <ngb-carousel>
-
-    <ng-template ngbSlide >
-        
-        @for (image of images; track $index) {
-            <div class="caroules-wrapper">
-                <img src="assets/img/{{image.name}}" >
-            </div>
-        }
-    </ng-template>
-    
-</ngb-carousel> -->
 <div class="caroules-wrapper">
 <ngb-carousel >
     @if (showCarousel) {
@@ -40,14 +28,54 @@ integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2
     }
     
     <ng-template ngbSlide>
-        <img src="../../../assets/img/carousel-1.jpg" class="coruImage">
+        <div class="gallery_container">
+            <div class="gallery_img">
+                <figure>
+                    <img src="../../../assets/img/carousel-1.jpg" class="coruImage">
+                </figure>
+        </div>
+        <div class="gallery_description">
+            <div class="headertext">
+                BEST ONLINE COURSES
+            </div>
+            <div class="description_date">
+                August 20th 2016 
+            </div>
+            <div class="description_text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary email_btn ">Email</button>
+
+    </div>   
     </ng-template>
+
     <ng-template ngbSlide>
-        <img src="../../../assets/img/carousel-2.jpg" class="coruImage">
+        <div class="gallery_container">
+            <div class="gallery_img">
+                <figure>
+                    <img src="../../../assets/img/carousel-2.jpg" class="coruImage">
+                </figure>
+        </div>
+        <div class="gallery_description">
+            <div class="headertext">
+                BEST ONLINE COURSES
+            </div>
+            <div class="description_date">
+                August 20th 2016 
+            </div>
+            <div class="description_text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
+            </div>
+            
+        </div>
+        <button type="button" class="btn btn-primary email_btn ">Email</button>
+    </div>   
     </ng-template>
     
   </ngb-carousel>
 </div>
+
   
 
 
