@@ -24,7 +24,6 @@ h2{
     margin-bottom: 0;
     gap: 30px;
     width: 50%;
-    box-sizing: border-box;
 }
 li{
     list-style-type: none; /* Remove bullets */ 
@@ -32,6 +31,16 @@ li{
 }
 li.active a {
     color: var(--dark);
+}
+.routing li a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--text);
+    transition: 0.15s ease-in-out;
 }
 a{
     text-decoration: none;
@@ -89,7 +98,7 @@ a:hover {
     padding-bottom: 5px;
     font-size: large;
 }
-.btn{
+.email_btn{
     color: var(--light);
     border-radius:none !important ;
     background-color: var(--text);
@@ -108,9 +117,36 @@ a:hover {
     
     
 }
-.btn:hover{
+.email_btn:hover{
     color: var(--light);
     
     background-color: var(--dark);
     border: none;
+}
+
+.btn-card{
+    background-color: var(--text);
+    color: var(--light);
+}
+
+.btn-card:hover{
+    color: var(--light);
+    
+    background-color: var(--dark);
+    
+}
+.col-sm{
+    margin: auto;
+    min-width: 250px !important;
+    height: 250px;
+    width: 90%;
+    
+    
+}
+
+.row{
+    
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    gap: 50px;
 }
