@@ -4,19 +4,22 @@
 integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 <nav class="navBar d-flex">
-    <div class="logo">
-        <a href="index.html">
-            <h2 class="m-0"><i class="fa fa-book me-3"></i>eLEARNING</h2>
-        </a>
-    </div>
-    <i class="bi bi-list" id="menuIcon"></i>
-    <ul class="d-flex routing" id="myDIV">
-        <li><a href="index.html" class="nav-list">HOME</a></li>
-        <li><a href="/about.html" class="nav-list">ABOUT</a></li>
-        <li><a href="courses.html" class="nav-list">COURSES</a></li>
-        <li><a href="stuff.html" class="nav-list">STUFF</a></li>
-        <li><a href="contact.html" class="nav-list">CONTACT</a></li>
-    </ul>
+  <div class="logo">
+      <a href="">
+          <h2 class="m-0"><i class="fa fa-book me-3"></i>eLEARNING</h2>
+      </a>
+  </div>
+  <div class="menu-icon" (click)="toggleMenu()">
+      <span *ngIf="!showMenu"><i class="bi bi-list"></i></span>
+      <span *ngIf="showMenu"><i class="bi bi-x"></i></span>
+  </div>
+  <ul class="routing" id="myDIV" *ngIf="showMenu">
+      <li><a href="" class="nav-list">HOME</a></li>
+      <li><a href="" class="nav-list">ABOUT</a></li>
+      <li><a href="" class="nav-list">COURSES</a></li>
+      <li><a href="" class="nav-list">STUFF</a></li>
+      <li><a href="" class="nav-list">CONTACT</a></li>
+  </ul>
 </nav>
 
 <div class="caroules-wrapper">
@@ -130,3 +133,5 @@ integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2
 
 
 <!-- <div class="carusel_2"><img src="assets/img/carousel-2.jpg" height="100%" width="100%"></div> -->
+
+
