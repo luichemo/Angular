@@ -1,22 +1,28 @@
 
 nav {
-    background-color: var(--light);
+    background-color: #105444;
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 1%;
     padding-bottom: 1%;
     width: 100%;
-    
-    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Adjust the z-index based on your layout */
+    transition: top 0.3s ease;
+}
+.nav img{
+    height: 100px;
 }
 .logo{
     width: 50%;
     box-sizing: border-box; 
-    color: var(--text);
+    color: var(--light);
     justify-content: flex-start;
 }
 h2{
-    color: var(--text);
+    color: var(--light);
 }
 .routing {
     justify-content: flex-end;
@@ -31,20 +37,20 @@ li{
     text-decoration: none;
 }
 li.active a {
-    color: var(--dark);
+    color: var(--light);
 }
 
 a{
     text-decoration: none;
     font-size: 20px;
     font-weight: 600;
-    color: var(--text);
+    color: var(--light);
     transition: color 0.3s, text-shadow 0.3s;
     outline: none;
 }
 a:hover {
-    color: var(--dark);
-    text-shadow: var(--dark); /* Add a subtle box shadow on hover */
+    color: var(--text);
+    text-shadow: var(--text); /* Add a subtle box shadow on hover */
     
 }
 .d-flex.routing li a.active {
@@ -112,7 +118,7 @@ a:hover {
 .email_btn:hover{
     color: var(--light);
     
-    background-color: var(--dark);
+    background-color: var(--background);
     border: none;
 }
 
@@ -135,23 +141,45 @@ a:hover {
     
     
 }
+.card{
+    background-color: var(--lightText);
+    color: var(--text);
+    text-align: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    transition: transform 0.8s ease, box-shadow 0.8s ease;
+}
+.card i {
+    font-size: 2rem; /* Adjust the icon size as needed */
+    margin-bottom: 10px; /* Add some space between the icon and text */
+  }
 
-
+.bi-backpack3{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
 .row{
     
     margin-top: 3rem;
     margin-bottom: 3rem;
     gap: 50px;
+    
 }
-@media only screen and (min-width: 850px){
-    .bi-x{
-        display: none;
-    }
-    .bi-list{
-        display: none;
-    }
+.card:hover{
+    color: var(--light);
+    background-color: var(--text);
+    transition: 0.8s;
+    transform: scale(1.1); /* Adjust the scale factor as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
-@media only screen and (max-width: 850px){
+.footer{
+    height: 300px;
+    background-color: #105444;
+}
+
+@media only screen and (max-width: 1008px){
     .description_date{
         font-size: large;
         margin-bottom: 20px;
@@ -163,6 +191,22 @@ a:hover {
     .headertext{
        display: none;
     }
+    .email_btn{
+        font-size: 20px;
+        padding: 10px;
+        width: 100px;
+    }
+}
+@media only screen and (min-width: 850px){
+    .bi-x{
+        display: none;
+    }
+    .bi-list{
+        display: none;
+    }
+}
+@media only screen and (max-width: 850px){
+ 
 
     .routing{
         position: fixed;
@@ -176,7 +220,7 @@ a:hover {
         padding-top: 20px;
         width: 190px;
         top: 0;
-        margin-top: 30px;
+        margin-top: 40px;
         
         
     }
@@ -205,11 +249,7 @@ a:hover {
         height: 20px;
         z-index: 22;
     }
-    .email_btn{
-        font-size: 20px;
-        padding: 10px;
-        width: 100px;
-    }
+    
     nav{
         position: relative;
        padding-bottom: 10px; 
