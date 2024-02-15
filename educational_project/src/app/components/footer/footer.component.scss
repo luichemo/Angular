@@ -1,0 +1,64 @@
+.footer{
+    height: auto;
+    background-color: #105444;
+}
+.footer-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light);
+}
+.footRow{
+    gap: 50px;
+}
+.footclass{
+    max-width: 100px;
+    text-align: center;
+}
+.footclass li{
+    margin-top: 30px;
+}
+.footclass ul{
+    padding-right: 2rem;
+    text-align: start;
+
+    
+}
+
+
+li.active a {
+    color: var(--light);
+}
+
+a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--light);
+    transition: color 0.3s, text-shadow 0.3s;
+    outline: none;
+}
+a:hover {
+    color: var(--text);
+    text-shadow: var(--text); /* Add a subtle box shadow on hover */
+    
+}
+.col-sm{
+    margin: auto;
+    min-width: 250px !important;
+    height: 250px;
+    width: 90%;
+    
+    
+}
+.row{
+    
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    gap: 50px;
+    
+}
+
+.autor{
+    right: 0;
+}

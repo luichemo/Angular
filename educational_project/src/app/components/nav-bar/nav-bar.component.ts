@@ -1,26 +1,14 @@
-import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { Component, HostListener, Inject, OnInit, PLATFORM_ID } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
-
-
+import { isPlatformBrowser, CommonModule } from '@angular/common';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-nav-bar',
   standalone: true,
-  imports: [RouterModule,NgbCarouselModule, CommonModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
-  host: {ngSkipHydration: 'true'}
+  imports: [CommonModule],
+  templateUrl: './nav-bar.component.html',
+  styleUrl: './nav-bar.component.scss'
 })
-export class HomeComponent  {
-  
-  images =[
-    {name: 'carousel-1.jpg' },
-    {name: 'carousel-2.jpg'}
-  ]
-
-  showCarousel = true;
+export class NavBarComponent {
   showMenu: boolean = false;
 
   constructor(@Inject(PLATFORM_ID) private platformId: any) {}

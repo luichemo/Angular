@@ -1,0 +1,18 @@
+<nav class="navBar d-flex" appScroll>
+    <div class="logo">
+      <a href="">
+        <h2 class="m-0"><i class="fa fa-book me-3"></i>eLEARNING</h2>
+      </a>
+    </div>
+    <div class="menu-icon" (click)="toggleMenu()">
+      <span *ngIf="!showMenu"><i class="bi bi-list"></i></span>
+      <span *ngIf="showMenu"><i class="bi bi-x"></i></span>
+    </div>
+    <ul class="routing" id="myDIV" *ngIf="showMenu">
+      <li><a href="" class="nav-list">HOME</a></li>
+      <li><a href="" class="nav-list">ABOUT</a></li>
+      <li><a href="" class="nav-list">COURSES</a></li>
+      <li><a href="" class="nav-list">STUFF</a></li>
+      <li><a href="" class="nav-list">CONTACT</a></li>
+    </ul>
+  </nav>

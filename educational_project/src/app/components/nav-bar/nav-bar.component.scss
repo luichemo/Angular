@@ -1,0 +1,146 @@
+nav {
+    background-color: #105444;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Adjust the z-index based on your layout */
+    transition: top 0.3s ease;
+}
+.nav img{
+    height: 100px;
+}
+.logo{
+    width: 50%;
+    box-sizing: border-box; 
+    color: var(--light);
+    justify-content: flex-start;
+}
+h2{
+    color: var(--light);
+}
+
+.nav img{
+    height: 100px;
+}
+.logo{
+    width: 50%;
+    box-sizing: border-box; 
+    color: var(--light);
+    justify-content: flex-start;
+}
+h2{
+    color: var(--light);
+}
+.routing {
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 0;
+    gap: 30px;
+    width: 50%;
+    display: flex;
+}
+li{
+    list-style-type: none; /* Remove bullets */ 
+    text-decoration: none;
+}
+li.active a {
+    color: var(--light);
+}
+
+a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--light);
+    transition: color 0.3s, text-shadow 0.3s;
+    outline: none;
+}
+a:hover {
+    color: var(--text);
+    text-shadow: var(--text); /* Add a subtle box shadow on hover */
+    
+}
+.d-flex.routing li a.active {
+    color: var(--dark);
+    /* Add any other styles you want for the active link */
+}
+@media only screen and (max-width: 850px){
+ 
+
+    .routing{
+        position: fixed;
+        right: 0;
+        top:64px;
+        width: 280px;
+        height: 100%;
+        background-color: var(--background);
+        display: block;
+        z-index: 21;
+        padding-top: 20px;
+        width: 190px;
+        top: 0;
+        margin-top: 40px;
+        
+        
+    }
+    .routing ul li{
+        display: inline-block;
+    }
+    
+    li{
+        margin-bottom: 15px;
+    }
+    .bi-list{
+        color: var(--text);
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 38px;
+        height: 20px;
+        z-index: 22;
+        color: var(--light);
+        padding-left: 5%;
+        padding-right: 4%;
+        padding-top: 1%;
+
+    }
+    .bi-x{
+        color: var(--text);
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 38px;
+        height: 20px;
+        z-index: 22;
+        color: var(--light);
+        padding-left: 5%;
+        padding-right: 4%;
+        padding-top: 1%;
+
+    }
+    
+    nav{
+        position: relative;
+       padding-bottom: 10px; 
+       
+    }
+    .logo{
+        
+        margin-top: 10px;
+    }
+    
+}
+@media only screen and (min-width: 850px){
+    .bi-x{
+        display: none;
+    }
+    .bi-list{
+        display: none;
+
+    }
+}
