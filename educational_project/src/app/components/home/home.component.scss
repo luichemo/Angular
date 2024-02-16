@@ -164,6 +164,38 @@ a:hover {
 
     
 }
+.aboutClass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #105444;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding-bottom: 40px;
+}
+
+.about_img{
+
+    width: 45%;
+}
+@media only screen and (max-width: 850px){
+    .container{
+        display: block;
+    }
+    .about_img{
+        padding-bottom: 40px;
+        
+        width: 100%;
+        padding-right: none;
+    }
+    .about_text{
+        width: 100%;
+     }
+}
 
 @media only screen and (max-width: 1008px){
     .description_date{
@@ -183,3 +215,73 @@ a:hover {
         width: 100px;
     }
 }
+
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+
+
+
+  body:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    height: 100%;
+    }
+
+h1 {
+  display: inline-block;
+  color: var(--background);
+  font-family: 'Righteous', serif;
+  font-size: 3rem; 
+  text-shadow: .05em .05em 0 var(--lightText);
+  }
+  h1:after {
+    content: attr(data-shadow);
+    position: absolute;
+    top: .06em; left: .06em;
+    z-index: -1;
+    text-shadow: none;
+    background-image:
+      linear-gradient(
+        45deg,
+        transparent 45%,
+        hsla(48,20%,90%,1) 45%,
+        hsla(48,20%,90%,1) 55%,
+        transparent 0
+        );
+    background-size: .05em .05em;
+
+    -webkit-text-fill-color: transparent;
+  
+    animation: shad-anim 15s linear infinite;
+    }
+
+
+    h2 {
+        display: inline-block;
+        color: var(--lightText);
+        font-family: 'Righteous', serif;
+        font-size: 3rem; 
+        text-shadow: .05em .05em 0 var(--background);
+        }
+        h2:after {
+          content: attr(data-shadow);
+          position: absolute;
+          top: .06em; left: .06em;
+          z-index: -1;
+          text-shadow: none;
+          background-image:
+            linear-gradient(
+              45deg,
+              transparent 45%,
+              hsla(48,20%,90%,1) 45%,
+              hsla(48,20%,90%,1) 55%,
+              transparent 0
+              );
+          background-size: .05em .05em;
+      
+          -webkit-text-fill-color: transparent;
+        
+          animation: shad-anim 15s linear infinite;
+          }
+
