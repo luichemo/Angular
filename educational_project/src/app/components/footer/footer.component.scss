@@ -64,11 +64,21 @@ a:hover {
     display: flex;
 }
 .Ri{
-    right: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.footclass{
+    display: flex;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 850px){
     .autor{
         display: block;
     }
+    .Ri{
+        display: flex;
+        justify-content: flex-start;
+    }
+    
 }
