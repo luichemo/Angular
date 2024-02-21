@@ -1,10 +1,11 @@
 import { isPlatformBrowser, CommonModule } from '@angular/common';
 import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss'
 })
@@ -43,5 +44,15 @@ export class NavBarComponent {
       // Set showMenu based on screen width
       this.showMenu = window.innerWidth > 850;
     }
+  }
+  activeLink: string = 'home';
+
+  changeColor(event: Event, link: string): void {
+    event.preventDefault();
+    this.activeLink = link;
+  }
+
+  isActive(link: string): boolean {
+    return this.activeLink === link;
   }
 }

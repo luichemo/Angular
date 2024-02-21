@@ -61,4 +61,14 @@ a:hover {
 
 .autor{
     right: 0;
+    display: flex;
+}
+.Ri{
+    right: 0;
+}
+
+@media only screen and (max-width: 850px){
+    .autor{
+        display: block;
+    }
 }

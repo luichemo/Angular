@@ -144,3 +144,10 @@ a:hover {
 
     }
 }
+
+.nav-link.active {
+    color: var(--lightText)/* your desired active color */;
+    scale: 1.1;
+    transition: 0.1s;
+    font-weight:bold ;
+  }
