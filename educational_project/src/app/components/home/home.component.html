@@ -32,7 +32,7 @@
             auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
           </div>
         </div>
-        <button type="button" class="btn btn-primary email_btn " data-toggle="modal" data-target="#exampleModalCenter2">Email</button>
+        <button type="button" class="btn btn-primary email_btn " data-toggle="modal" data-target="#exampleModalCenter2" >Email</button>
       </div>
     </ng-template>
 
@@ -55,7 +55,7 @@
             auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
           </div>
         </div>
-        <button type="button" class="btn btn-primary email_btn " data-toggle="modal" data-target="#exampleModalCenter2">Email</button>
+        <button type="button" class="btn btn-primary email_btn " data-toggle="modal" data-target="#exampleModalCenter2" >Email</button>
       </div>
     </ng-template>
   </ngb-carousel>
@@ -119,12 +119,12 @@
 
 
 
-<div [formGroup]="form" class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+<div [formGroup]="form"  class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document" >
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header" id="emailForm">
         <h5 class="modal-title" id="exampleModalLongTitle">Send Email</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none; background: none; font-size: 30px; color: red;">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none; background: none; font-size: 30px; color:white; ">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -153,44 +153,11 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary"  data-dismiss="modal" style="border: none; float: left;">Close</button>
-        <button type="submit" class="btn btn-primary" (click)="send()" style="background-color: var(--background); border: none;">Send</button>
+        <button type="button" class="btn btn-secondary"#closebutton data-dismiss="modal" style="border: none; float: left;" >Close</button>
+        <button type="submit" class="btn btn-primary"   id="closeModal" (click)="send()"   style="background-color:var(--lightText); color: var(--background); border: none;">Send</button>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- --------------------footer------------------------- -->
-
-
-
-
-
-
-
-
-
-<!-- ../../../assets/img/cat-2.jpg -->
-
-<!-- Button trigger modal -->
 
 

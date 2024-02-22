@@ -1,9 +1,10 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { Component, HostListener, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, HostListener, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import emailjs, { send } from '@emailjs/browser';
 import { FormBuilder, FormGroup, NgForm, ReactiveFormsModule } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -32,6 +33,7 @@ export class HomeComponent  {
     message: '',
 
   });
+
 
   constructor(@Inject(PLATFORM_ID) private platformId: any, private fb: FormBuilder) {}
 
@@ -72,19 +74,22 @@ export class HomeComponent  {
     }
     
   }
+  @ViewChild('closebutton') closebutton:any;
   async send(){
     console.log(this.form.value);
     
     
     emailjs.init('AeKFIFx4iDkhwO0Dq')
-    let response = await emailjs.send("service_5a5phtr","template_895qvzp",{
+    /* let response = await emailjs.send("service_5a5phtr","template_895qvzp",{
       from_name: this.form.value.from_name,
       to_name: this.form.value.to_name,
       from_email: this.form.value.from_email,
       subject: this.form.value.subject,
       message: this.form.value.message,
       }); 
-    alert('Message has been sent.');
+     */
     this.form.reset();
+    Swal.fire('Your email has been sent')
+    this.closebutton.nativeElement.click();
   }
 }

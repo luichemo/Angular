@@ -233,7 +233,7 @@ h1 {
   color: var(--background);
   font-family: 'Righteous', serif;
   font-size: 3rem; 
-  text-shadow: .05em .05em 0 var(--lightText);
+//   text-shadow: .05em .05em 0 var(--lightText);
   }
   h1:after {
     content: attr(data-shadow);
@@ -261,7 +261,7 @@ h1 {
         display: inline-block;
         color: var(--lightText);
         font-family: 'Righteous', serif;
-        font-size: 3rem; 
+        font-size: 2rem; 
         text-shadow: .05em .05em 0 var(--background);
         }
         h2:after {
@@ -285,3 +285,16 @@ h1 {
           animation: shad-anim 15s linear infinite;
           }
 
+.modal-body{
+    background-color: var(--lightText);
+    color: var(--background);
+}
+#emailForm{
+    background-color: var(--background);
+    width: 100%;
+    color: white;
+    border-radius: 5px 5px 0 0;
+}
+.modal-footer{
+    background-color: var(--background);
+}
