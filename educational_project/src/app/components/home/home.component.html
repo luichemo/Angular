@@ -132,22 +132,26 @@
         <form action="javascript:void(0)" >
           <div class="form-group">
             <label for="formGroupExampleInput">Full Name</label>
-            <input formControlName="from_name" type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Your Full Name" style="margin-top: 10px;">
+            <input formControlName="from_name" type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Your Full Name" style="margin-top: 10px;"
+                   [class.is-invalid]="form.get('from_name')?.invalid && (form.get('from_name')?.dirty || form.get('from_name')?.touched)">
           </div>
 
           <div class="form-group">
             <label for="exampleFormControlInput1" style="margin-top: 20px;">Email address</label>
-            <input formControlName="from_email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" style="margin-top: 10px;">
+            <input formControlName="from_email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" style="margin-top: 10px;"
+                   [class.is-invalid]="form.get('from_email')?.invalid && (form.get('from_email')?.dirty || form.get('from_email')?.touched)">
           </div>
           
           <div class="form-group">
             <label for="formGroupExampleInput2" style="margin-top: 20px;">Subject</label>
-            <input formControlName="subject" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Anter Your Subject" style="margin-top: 10px;">
+            <input formControlName="subject" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter Your Subject" style="margin-top: 10px;"
+                   [class.is-invalid]="form.get('subject')?.invalid && (form.get('subject')?.dirty || form.get('subject')?.touched)">
           </div>
-
+          
           <div class="form-group">
             <label for="exampleFormControlTextarea1" style="margin-top: 20px;">Message</label>
-            <textarea formControlName="message" class="form-control" id="exampleFormControlTextarea1" rows="3" style="margin-top: 10px;"></textarea>
+            <textarea formControlName="message" class="form-control" id="exampleFormControlTextarea1" rows="3" style="margin-top: 10px;"
+                      [class.is-invalid]="form.get('message')?.invalid && (form.get('message')?.dirty || form.get('message')?.touched)"></textarea>
           </div>
           
         </form>

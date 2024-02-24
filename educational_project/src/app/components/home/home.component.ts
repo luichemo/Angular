@@ -3,7 +3,7 @@ import { Component, HostListener, Inject, OnInit, PLATFORM_ID, ViewChild } from 
 import { RouterModule } from '@angular/router';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import emailjs, { send } from '@emailjs/browser';
-import { FormBuilder, FormGroup, NgForm, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 
 
@@ -26,21 +26,25 @@ export class HomeComponent  {
   showMenu: boolean = false;
 
   form: FormGroup = this.fb.group({
-    from_name: '',
-    to_name: 'Admin',
-    from_email: '',
+    from_name: ['',Validators.required],
+    to_name: ['Admin', Validators.required],
+    from_email: ['',[Validators.required,Validators.email]],
     subject: '',
-    message: '',
+    message: ['',Validators.required],
 
   });
 
 
+
   constructor(@Inject(PLATFORM_ID) private platformId: any, private fb: FormBuilder) {}
+
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
       this.checkScreenWidth();
     }
+
+    
   }
 
   @HostListener('window:resize', ['$event'])
@@ -76,20 +80,23 @@ export class HomeComponent  {
   }
   @ViewChild('closebutton') closebutton:any;
   async send(){
-    console.log(this.form.value);
+    
+    if(this.form.valid){
+        emailjs.init('AeKFIFx4iDkhwO0Dq')
+         let response = await emailjs.send("service_5a5phtr","template_895qvzp",{
+          from_name: this.form.value.from_name,
+          to_name: this.form.value.to_name,
+          from_email: this.form.value.from_email,
+          subject: this.form.value.subject,
+          message: this.form.value.message,
+          }); 
+        
+        this.form.reset();
+        Swal.fire('Your email has been sent')
+        this.closebutton.nativeElement.click();
+      }
+    }
     
     
-    emailjs.init('AeKFIFx4iDkhwO0Dq')
-    /* let response = await emailjs.send("service_5a5phtr","template_895qvzp",{
-      from_name: this.form.value.from_name,
-      to_name: this.form.value.to_name,
-      from_email: this.form.value.from_email,
-      subject: this.form.value.subject,
-      message: this.form.value.message,
-      }); 
-     */
-    this.form.reset();
-    Swal.fire('Your email has been sent')
-    this.closebutton.nativeElement.click();
-  }
+    
 }
