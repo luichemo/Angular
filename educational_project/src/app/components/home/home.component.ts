@@ -92,4 +92,14 @@ export class HomeComponent  {
     Swal.fire('Your email has been sent')
     this.closebutton.nativeElement.click();
   }
+   activeLink: string = 'home';
+
+  changeColor(event: Event, link: string): void {
+    event.preventDefault();
+    this.activeLink = link;
+  }
+
+  isActive(link: string): boolean {
+    return this.activeLink === link;
+  }
 }

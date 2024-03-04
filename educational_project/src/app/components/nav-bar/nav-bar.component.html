@@ -9,10 +9,10 @@
       <span *ngIf="showMenu"><i class="bi bi-x"></i></span>
     </div>
     <ul class="routing" id="myDIV" *ngIf="showMenu">
-      <li><a [routerLink]="['home']" (click)="changeColor($event, 'home')" class="nav-list nav-link" [ngClass]="{'active': isActive('home')}">HOME</a></li>
-      <li><a [routerLink]="['about']" (click)="changeColor($event, 'about')" class="nav-list nav-link" [ngClass]="{'active': isActive('about')}">ABOUT</a></li>
-      <li><a [routerLink]="['courses']" (click)="changeColor($event, 'courses')" class="nav-list nav-link" [ngClass]="{'active': isActive('courses')}">COURSES</a></li>
-      <li><a [routerLink]="['stuff']" (click)="changeColor($event, 'stuff')" class="nav-list nav-link" [ngClass]="{'active': isActive('stuff')}">STUFF</a></li>
-      <li><a [routerLink]="['contact']" (click)="changeColor($event, 'contact')" class="nav-list nav-link" [ngClass]="{'active': isActive('contact')}">CONTACT</a></li>
+      <li><a [routerLink]="['home']" class="nav-list nav-link" [routerLinkActive]="['active']">HOME</a></li>
+      <li><a [routerLink]="['about']" class="nav-list nav-link" [routerLinkActive]="['active']">ABOUT</a></li>
+      <li><a [routerLink]="['courses']"  class="nav-list nav-link" [routerLinkActive]="['active']">COURSES</a></li>
+      <li><a [routerLink]="['stuff']"  class="nav-list nav-link" [routerLinkActive]="['active']">STUFF</a></li>
+      <li><a [routerLink]="['contact']"  class="nav-list nav-link" [routerLinkActive]="['active']">CONTACT</a></li>
     </ul>
   </nav>
