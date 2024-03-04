@@ -65,9 +65,9 @@ a:hover {
 }
 
 .email_btn {
-    color: var(--light);
+    color:white;
     border-radius: none !important;
-    background-color: var(--text);
+    background-color: var(--background);
     border: none;
     font-size: 30px;
     margin-top: 20px;
@@ -79,16 +79,14 @@ a:hover {
     left: 10%;
     right: 10%;
     z-index: 20;
-
-
-
 }
 
 .email_btn:hover {
-    color: var(--light);
+    transition: 0.5s;
 
-    background-color: var(--background);
+    background-color: var(--lightText);
     border: none;
+    color: var(--background);
 }
 
 .btn-card {
@@ -212,28 +210,18 @@ a:hover {
 }
 .about_btn:hover{
     background-color: var(--lightText);
+    transition: 0.5s;
+    color: var(--background);
+}
+.courses{
+    margin-bottom:170px;
+}
+.couCard{
+    margin-bottom: 40px;
+    background-color: none;
 }
 
-
-
-@media only screen and (max-width: 850px) {
-    .container {
-        display: block;
-    }
-
-    .about_img {
-        padding-bottom: 40px;
-
-        width: 100%;
-        padding-right: none;
-    }
-
-    .about_text {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 1008px) {
+@media only screen and (max-width: 1458px) {
     .description_date {
         font-size: large;
         margin-bottom: 20px;
@@ -253,11 +241,88 @@ a:hover {
         padding: 10px;
         width: 100px;
     }
+    
+    
+  
+}
+@media only screen and (max-width: 992px) {
+    .courses{
+        margin-bottom: 300px;
+    }
+    .couCard{
+        margin-top: 60px;
+    }
+    .lastCard{
+        margin-bottom: 20px;
+    }
+    .about_text h2{
+        margin-bottom:20px
+    }
+  
+}
+
+
+
+@media only screen and (max-width: 850px) {
+    .container {
+        display: block;
+    }
+
+    .about_img {
+        padding-bottom: 40px;
+
+        width: 100%;
+        padding-right: none;
+    }
+
+    .about_text {
+        width: 100%;
+    }
+    
+    
+}
+
+
+
+
+
+
+.about_text h2{
+    margin-bottom:100px
+}
+
+
+@media only screen and (max-width: 770px) {
+    .couCard{
+        margin-bottom: 150px;
+    }
+    .row[_ngcontent-ng-c2166648928] {
+        margin-top: 3rem;
+        margin-bottom: -18rem;
+        gap: 50px;
+    }
+    .courses{
+        margin-bottom: 100px;
+    }
+    .row[_ngcontent-ng-c3343738704]{
+        margin-top: 0rem;
+    }
 }
 
 @import url(https://fonts.googleapis.com/css?family=Righteous);
 
-
+@media only screen and (max-width: 460px){
+    .couCard{
+        margin-bottom: 50px;
+    }
+    
+}
+@media only screen and (max-width: 448px){
+    .couCard{
+        margin-bottom: 70px;
+    }
+    
+}
 
 body:before {
     content: '';
@@ -340,3 +405,13 @@ h2:after {
     background-color: var(--background);
 }
 
+.couBtn{
+    background-color: var(--background);
+    border: none;
+    color: white;
+}
+.couBtn:hover{
+    background-color: var(--lightText);
+    color: var(--background);
+    transition: 0.5s;
+}

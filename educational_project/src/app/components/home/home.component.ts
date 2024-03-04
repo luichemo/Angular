@@ -82,14 +82,14 @@ export class HomeComponent  {
   async send(){
     
     if(this.form.valid){
-        emailjs.init('AeKFIFx4iDkhwO0Dq')
-         let response = await emailjs.send("service_5a5phtr","template_895qvzp",{
-          from_name: this.form.value.from_name,
-          to_name: this.form.value.to_name,
-          from_email: this.form.value.from_email,
-          subject: this.form.value.subject,
-          message: this.form.value.message,
-          }); 
+        // emailjs.init('AeKFIFx4iDkhwO0Dq')
+        //  let response = await emailjs.send("service_5a5phtr","template_895qvzp",{
+        //   from_name: this.form.value.from_name,
+        //   to_name: this.form.value.to_name,
+        //   from_email: this.form.value.from_email,
+        //   subject: this.form.value.subject,
+        //   message: this.form.value.message,
+        //   }); 
         
         this.form.reset();
         Swal.fire('Your email has been sent')
