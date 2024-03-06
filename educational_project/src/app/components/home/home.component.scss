@@ -152,7 +152,7 @@ a:hover {
 
 .footer {
     height: auto;
-    background-color: #105444;
+    background-color: #345619;
 }
 
 .footer-text {
@@ -186,7 +186,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #105444;
+    color: #345619;
 }
 
 .container {
@@ -220,6 +220,19 @@ a:hover {
     margin-bottom: 40px;
     background-color: none;
 }
+.stuffCont{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-bottom: 120px;
+}
+.headText{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
 
 @media only screen and (max-width: 1458px) {
     .description_date {
@@ -241,7 +254,20 @@ a:hover {
         padding: 10px;
         width: 100px;
     }
-    
+    .stuffCard{
+        margin-bottom: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .stuffCont{
+        margin-bottom: 0px;
+    }
+    .headText{
+        margin-bottom: 100px;
+        
+    }
+
     
   
 }
@@ -258,6 +284,7 @@ a:hover {
     .about_text h2{
         margin-bottom:20px
     }
+    
   
 }
 
