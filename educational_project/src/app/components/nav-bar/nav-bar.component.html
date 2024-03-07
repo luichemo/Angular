@@ -1,7 +1,7 @@
 <nav class="navBar d-flex" appScroll>
     <div class="logo">
       <a href="">
-        <h2 class="m-0"><i class="fa fa-book me-3"></i>eLEARNING</h2>
+        <img src="../../../assets/img/logo.png" height="100px" alt="">
       </a>
     </div>
     <div class="menu-icon" (click)="toggleMenu()">
@@ -9,10 +9,10 @@
       <span *ngIf="showMenu"><i class="bi bi-x"></i></span>
     </div>
     <ul class="routing" id="myDIV" *ngIf="showMenu">
-      <li><a [routerLink]="['home']" class="nav-list nav-link" [routerLinkActive]="['active']">HOME</a></li>
-      <li><a [routerLink]="['about']" class="nav-list nav-link" [routerLinkActive]="['active']">ABOUT</a></li>
-      <li><a [routerLink]="['courses']"  class="nav-list nav-link" [routerLinkActive]="['active']">COURSES</a></li>
-      <li><a [routerLink]="['stuff']"  class="nav-list nav-link" [routerLinkActive]="['active']">STUFF</a></li>
-      <li><a [routerLink]="['contact']"  class="nav-list nav-link" [routerLinkActive]="['active']">CONTACT</a></li>
+      <li><a [routerLink]="['home']" class="nav-list nav-link" [routerLinkActive]="['active']">მთავარი</a></li>
+      <li><a [routerLink]="['about']" class="nav-list nav-link" [routerLinkActive]="['active']">ჩვენს შესახებ</a></li>
+      <li><a [routerLink]="['courses']"  class="nav-list nav-link" [routerLinkActive]="['active']">კურსები</a></li>
+      <li><a [routerLink]="['stuff']"  class="nav-list nav-link" [routerLinkActive]="['active']">გუნდი</a></li>
+      <li><a [routerLink]="['contact']"  class="nav-list nav-link" [routerLinkActive]="['active']">კონტაქტი</a></li>
     </ul>
   </nav>
