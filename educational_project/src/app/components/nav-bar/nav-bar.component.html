@@ -1,18 +1,20 @@
-<nav class="navBar d-flex" appScroll>
-    <div class="logo">
-      <a href="">
-        <img src="../../../assets/img/logo.png" height="100px" alt="">
-      </a>
-    </div>
-    <div class="menu-icon" (click)="toggleMenu()">
-      <span *ngIf="!showMenu"><i class="bi bi-list"></i></span>
-      <span *ngIf="showMenu"><i class="bi bi-x"></i></span>
-    </div>
-    <ul class="routing" id="myDIV" *ngIf="showMenu">
-      <li><a [routerLink]="['home']" class="nav-list nav-link" [routerLinkActive]="['active']">მთავარი</a></li>
-      <li><a [routerLink]="['about']" class="nav-list nav-link" [routerLinkActive]="['active']">ჩვენს შესახებ</a></li>
-      <li><a [routerLink]="['courses']"  class="nav-list nav-link" [routerLinkActive]="['active']">კურსები</a></li>
-      <li><a [routerLink]="['stuff']"  class="nav-list nav-link" [routerLinkActive]="['active']">გუნდი</a></li>
-      <li><a [routerLink]="['contact']"  class="nav-list nav-link" [routerLinkActive]="['active']">კონტაქტი</a></li>
-    </ul>
-  </nav>
+<nav class="navBar d-flex" appScroll [class.brightness-filter]="showMenu">
+  <div class="logo">
+    <a href="">
+      <img src="../../../assets/img/logo.png" height="100px" alt="">
+    </a>
+  </div>
+  <div class="menu-icon" (click)="toggleMenu()">
+    <span *ngIf="!showMenu"><i class="bi bi-list"></i></span>
+    <span *ngIf="showMenu"><i class="bi bi-x"></i></span>
+    <span *ngIf="showMenu"><img src="../../../assets/img/image-removebg-preview.png" height="100px" class=" footLogo" alt=""></span>
+    <span *ngIf="showMenu"><p class="foLoText">HAZEL</p></span>
+  </div>
+  <ul class="routing" id="myDIV" *ngIf="showMenu">
+    <li><a [routerLink]="['home']" class="nav-list nav-link" [routerLinkActive]="['active']">მთავარი</a></li>
+    <li><a [routerLink]="['about']" class="nav-list nav-link bigList" [routerLinkActive]="['active']">ჩვენს შესახებ</a></li>
+    <li><a [routerLink]="['courses']"  class="nav-list nav-link" [routerLinkActive]="['active']">კურსები</a></li>
+    <li><a [routerLink]="['stuff']"  class="nav-list nav-link" [routerLinkActive]="['active']">გუნდი</a></li>
+    <li><a [routerLink]="['contact']"  class="nav-list nav-link" [routerLinkActive]="['active']">კონტაქტი</a></li>
+  </ul>
+</nav>

@@ -7,7 +7,7 @@
 
 
 <!-- --------------------------------------------- -->
-<div class="caroules-wrapper">
+<div class="caroules-wrapper" >
   <ngb-carousel >
     <!-- @if (showCarousel) {
     #carousel [interval]="10000"
@@ -15,21 +15,21 @@
 
     <ng-template ngbSlide>
       <div class="gallery_container">
-        <div class="gallery_img">
+  
+    <div class="gallery_img">
           <figure>
             <img src="../../../assets/img/carousel-1.png"  class="coruImage">
           </figure>
         </div>
         <div class="gallery_description">
           <div class="headertext">
-            BEST ONLINE COURSES
+            საუკეთესო კურსები შენი განვითარებისთვის
           </div>
           <div class="description_date">
-            August 20th 2016
+            HAZEL   PMP მენტორინგი
           </div>
           <div class="description_text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec,
-            auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
+            პროექტის მენეჯმენტის მიმართულებით მსოფლიოში ყველაზე პრესტიჟული ლიცენზიის მიღება ჩვენი დახმარებით უკვე შესაძლებელია.
           </div>
         </div>
         <button type="button" class="btn btn-primary email_btn " data-toggle="modal" data-target="#exampleModalCenter2" >Email</button>
@@ -40,19 +40,18 @@
       <div class="gallery_container">
         <div class="gallery_img">
           <figure>
-            <img src="../../../assets/img/carousel-2.jpg" class="coruImage">
+            <img src="../../../assets/img/carousel-1.png" class="coruImage">
           </figure>
         </div>
         <div class="gallery_description">
           <div class="headertext">
-            BEST ONLINE COURSES
+            საუკეთესო კურსები შენი განვითარებისთვის
           </div>
           <div class="description_date">
-            August 20th 2016
+            HAZEL   PMI-ACP მენტორინგი
           </div>
           <div class="description_text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec,
-            auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
+            პროექტის მენეჯმენტის მიმართულებით მსოფლიოში ყველაზე პრესტიჟული ლიცენზიის მიღება ჩვენი დახმარებით უკვე შესაძლებელია.
           </div>
         </div>
         <button type="button" class="btn btn-primary email_btn " data-toggle="modal" data-target="#exampleModalCenter2" >Email</button>
@@ -67,7 +66,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document" >
     <div class="modal-content">
       <div class="modal-header" id="emailForm">
-        <h5 class="modal-title" id="exampleModalLongTitle">Send Email</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">მეილის გაგზავნა</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none; background: none; font-size: 30px; color:white; ">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -75,25 +74,25 @@
       <div class="modal-body">
         <form action="javascript:void(0)" >
           <div class="form-group">
-            <label for="formGroupExampleInput">Full Name</label>
-            <input formControlName="from_name" type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Your Full Name" style="margin-top: 10px;"
+            <label for="formGroupExampleInput">სრული სახელი</label>
+            <input formControlName="from_name" type="text" class="form-control" id="formGroupExampleInput" placeholder="მიუთითეთ თქვენი სახელი და გვარი" style="margin-top: 10px;"
                    [class.is-invalid]="form.get('from_name')?.invalid && (form.get('from_name')?.dirty || form.get('from_name')?.touched)">
           </div>
 
           <div class="form-group">
-            <label for="exampleFormControlInput1" style="margin-top: 20px;">Email address</label>
+            <label for="exampleFormControlInput1" style="margin-top: 20px;">ელქტრტონული მისამართი</label>
             <input formControlName="from_email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" style="margin-top: 10px;"
                    [class.is-invalid]="form.get('from_email')?.invalid && (form.get('from_email')?.dirty || form.get('from_email')?.touched)">
           </div>
           
           <div class="form-group">
-            <label for="formGroupExampleInput2" style="margin-top: 20px;">Subject</label>
-            <input formControlName="subject" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter Your Subject" style="margin-top: 10px;"
+            <label for="formGroupExampleInput2" style="margin-top: 20px;">თემა</label>
+            <input formControlName="subject" type="text" class="form-control" id="formGroupExampleInput2" placeholder="მიუთითეთ წერილის თემატიკა" style="margin-top: 10px;"
                    [class.is-invalid]="form.get('subject')?.invalid && (form.get('subject')?.dirty || form.get('subject')?.touched)">
           </div>
           
           <div class="form-group">
-            <label for="exampleFormControlTextarea1" style="margin-top: 20px;">Message</label>
+            <label for="exampleFormControlTextarea1" style="margin-top: 20px;">წერილი</label>
             <textarea formControlName="message" class="form-control" id="exampleFormControlTextarea1" rows="3" style="margin-top: 10px;"
                       [class.is-invalid]="form.get('message')?.invalid && (form.get('message')?.dirty || form.get('message')?.touched)"></textarea>
           </div>
@@ -101,8 +100,8 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary"#closebutton data-dismiss="modal" style="border: none; float: left;" >Close</button>
-        <button type="submit" class="btn btn-primary"   id="closeModal" (click)="send()"   style="background-color:var(--lightText); color: var(--background); border: none;">Send</button>
+        <button type="button" class="btn btn-secondary"#closebutton data-dismiss="modal" style="border: none; float: left;" >დახურვა</button>
+        <button type="submit" class="btn btn-primary"   id="closeModal" (click)="send()"   style="background-color:var(--lightText); color: var(--background); border: none;">გაგზავნა</button>
       </div>
     </div>
   </div>
@@ -115,37 +114,39 @@
 <div class="container">
   <div class="row">
     <div class="col-sm card">
-      <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-backpack3" viewBox="0 0 16 16">
-        <path d="M4.04 7.43a4 4 0 0 1 7.92 0 .5.5 0 1 1-.99.14 3 3 0 0 0-5.94 0 .5.5 0 1 1-.99-.14M4 9.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm1 .5v3h6v-3h-1v.5a.5.5 0 0 1-1 0V10z"/>
-        <path d="M6 2.341V2a2 2 0 1 1 4 0v.341c.465.165.904.385 1.308.653l.416-1.247a1 1 0 0 1 1.748-.284l.77 1.027a1 1 0 0 1 .15.917l-.803 2.407C13.854 6.49 14 7.229 14 8v5.5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5V8c0-.771.146-1.509.41-2.186l-.802-2.407a1 1 0 0 1 .15-.917l.77-1.027a1 1 0 0 1 1.748.284l.416 1.247A6 6 0 0 1 6 2.34ZM7 2v.083a6 6 0 0 1 2 0V2a1 1 0 1 0-2 0m5.941 2.595.502-1.505-.77-1.027-.532 1.595q.447.427.8.937M3.86 3.658l-.532-1.595-.77 1.027.502 1.505q.352-.51.8-.937M8 3a5 5 0 0 0-5 5v5.5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5V8a5 5 0 0 0-5-5"/>
+      <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" style="margin-bottom: 20px ;" fill="currentColor" class="bi bi-piggy-bank" viewBox="0 0 16 16" >
+        <path d="M5 6.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m1.138-1.496A6.6 6.6 0 0 1 7.964 4.5c.666 0 1.303.097 1.893.273a.5.5 0 0 0 .286-.958A7.6 7.6 0 0 0 7.964 3.5c-.734 0-1.441.103-2.102.292a.5.5 0 1 0 .276.962"/>
+        <path fill-rule="evenodd" d="M7.964 1.527c-2.977 0-5.571 1.704-6.32 4.125h-.55A1 1 0 0 0 .11 6.824l.254 1.46a1.5 1.5 0 0 0 1.478 1.243h.263c.3.513.688.978 1.145 1.382l-.729 2.477a.5.5 0 0 0 .48.641h2a.5.5 0 0 0 .471-.332l.482-1.351c.635.173 1.31.267 2.011.267.707 0 1.388-.095 2.028-.272l.543 1.372a.5.5 0 0 0 .465.316h2a.5.5 0 0 0 .478-.645l-.761-2.506C13.81 9.895 14.5 8.559 14.5 7.069q0-.218-.02-.431c.261-.11.508-.266.705-.444.315.306.815.306.815-.417 0 .223-.5.223-.461-.026a1 1 0 0 0 .09-.255.7.7 0 0 0-.202-.645.58.58 0 0 0-.707-.098.74.74 0 0 0-.375.562c-.024.243.082.48.32.654a2 2 0 0 1-.259.153c-.534-2.664-3.284-4.595-6.442-4.595M2.516 6.26c.455-2.066 2.667-3.733 5.448-3.733 3.146 0 5.536 2.114 5.536 4.542 0 1.254-.624 2.41-1.67 3.248a.5.5 0 0 0-.165.535l.66 2.175h-.985l-.59-1.487a.5.5 0 0 0-.629-.288c-.661.23-1.39.359-2.157.359a6.6 6.6 0 0 1-2.157-.359.5.5 0 0 0-.635.304l-.525 1.471h-.979l.633-2.15a.5.5 0 0 0-.17-.534 4.65 4.65 0 0 1-1.284-1.541.5.5 0 0 0-.446-.275h-.56a.5.5 0 0 1-.492-.414l-.254-1.46h.933a.5.5 0 0 0 .488-.393m12.621-.857a.6.6 0 0 1-.098.21l-.044-.025c-.146-.09-.157-.175-.152-.223a.24.24 0 0 1 .117-.173c.049-.027.08-.021.113.012a.2.2 0 0 1 .064.199"/>
       </svg>
-      <h4>One of three columns</h4>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur nisi veritatis tempore rerum, vero facere, atque veniam ipsam vitae odit alias</p>
+      <h4>მოქნილი გადახდის პირობები</h4>
+      <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur nisi veritatis tempore rerum, vero facere, atque veniam ipsam vitae odit alias</p> -->
     
     </div>
     <div class="col-sm card">
-      <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-backpack3" viewBox="0 0 16 16">
-        <path d="M4.04 7.43a4 4 0 0 1 7.92 0 .5.5 0 1 1-.99.14 3 3 0 0 0-5.94 0 .5.5 0 1 1-.99-.14M4 9.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm1 .5v3h6v-3h-1v.5a.5.5 0 0 1-1 0V10z"/>
-        <path d="M6 2.341V2a2 2 0 1 1 4 0v.341c.465.165.904.385 1.308.653l.416-1.247a1 1 0 0 1 1.748-.284l.77 1.027a1 1 0 0 1 .15.917l-.803 2.407C13.854 6.49 14 7.229 14 8v5.5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5V8c0-.771.146-1.509.41-2.186l-.802-2.407a1 1 0 0 1 .15-.917l.77-1.027a1 1 0 0 1 1.748.284l.416 1.247A6 6 0 0 1 6 2.34ZM7 2v.083a6 6 0 0 1 2 0V2a1 1 0 1 0-2 0m5.941 2.595.502-1.505-.77-1.027-.532 1.595q.447.427.8.937M3.86 3.658l-.532-1.595-.77 1.027.502 1.505q.352-.51.8-.937M8 3a5 5 0 0 0-5 5v5.5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5V8a5 5 0 0 0-5-5"/>
+      <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" style="margin-bottom: 20px ;" fill="currentColor" class="bi bi-rocket-takeoff" viewBox="0 0 16 16">
+        <path d="M9.752 6.193c.599.6 1.73.437 2.528-.362s.96-1.932.362-2.531c-.599-.6-1.73-.438-2.528.361-.798.8-.96 1.933-.362 2.532"/>
+        <path d="M15.811 3.312c-.363 1.534-1.334 3.626-3.64 6.218l-.24 2.408a2.56 2.56 0 0 1-.732 1.526L8.817 15.85a.51.51 0 0 1-.867-.434l.27-1.899c.04-.28-.013-.593-.131-.956a9 9 0 0 0-.249-.657l-.082-.202c-.815-.197-1.578-.662-2.191-1.277-.614-.615-1.079-1.379-1.275-2.195l-.203-.083a10 10 0 0 0-.655-.248c-.363-.119-.675-.172-.955-.132l-1.896.27A.51.51 0 0 1 .15 7.17l2.382-2.386c.41-.41.947-.67 1.524-.734h.006l2.4-.238C9.005 1.55 11.087.582 12.623.208c.89-.217 1.59-.232 2.08-.188.244.023.435.06.57.093q.1.026.16.045c.184.06.279.13.351.295l.029.073a3.5 3.5 0 0 1 .157.721c.055.485.051 1.178-.159 2.065m-4.828 7.475.04-.04-.107 1.081a1.54 1.54 0 0 1-.44.913l-1.298 1.3.054-.38c.072-.506-.034-.993-.172-1.418a9 9 0 0 0-.164-.45c.738-.065 1.462-.38 2.087-1.006M5.205 5c-.625.626-.94 1.351-1.004 2.09a9 9 0 0 0-.45-.164c-.424-.138-.91-.244-1.416-.172l-.38.054 1.3-1.3c.245-.246.566-.401.91-.44l1.08-.107zm9.406-3.961c-.38-.034-.967-.027-1.746.163-1.558.38-3.917 1.496-6.937 4.521-.62.62-.799 1.34-.687 2.051.107.676.483 1.362 1.048 1.928.564.565 1.25.941 1.924 1.049.71.112 1.429-.067 2.048-.688 3.079-3.083 4.192-5.444 4.556-6.987.183-.771.18-1.345.138-1.713a3 3 0 0 0-.045-.283 3 3 0 0 0-.3-.041Z"/>
+        <path d="M7.009 12.139a7.6 7.6 0 0 1-1.804-1.352A7.6 7.6 0 0 1 3.794 8.86c-1.102.992-1.965 5.054-1.839 5.18.125.126 3.936-.896 5.054-1.902Z"/>
       </svg>
-      <h4>One of three columns</h4>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur nisi veritatis tempore rerum, vero facere, atque veniam ipsam vitae odit alias</p>
+      <h4>სასწავლო პროცესის ეფექტური მართვა.</h4>
+      <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur nisi veritatis tempore rerum, vero facere, atque veniam ipsam vitae odit alias</p> -->
     </div>
     <div class="col-sm card">
-      <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-backpack3" viewBox="0 0 16 16">
-        <path d="M4.04 7.43a4 4 0 0 1 7.92 0 .5.5 0 1 1-.99.14 3 3 0 0 0-5.94 0 .5.5 0 1 1-.99-.14M4 9.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm1 .5v3h6v-3h-1v.5a.5.5 0 0 1-1 0V10z"/>
-        <path d="M6 2.341V2a2 2 0 1 1 4 0v.341c.465.165.904.385 1.308.653l.416-1.247a1 1 0 0 1 1.748-.284l.77 1.027a1 1 0 0 1 .15.917l-.803 2.407C13.854 6.49 14 7.229 14 8v5.5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5V8c0-.771.146-1.509.41-2.186l-.802-2.407a1 1 0 0 1 .15-.917l.77-1.027a1 1 0 0 1 1.748.284l.416 1.247A6 6 0 0 1 6 2.34ZM7 2v.083a6 6 0 0 1 2 0V2a1 1 0 1 0-2 0m5.941 2.595.502-1.505-.77-1.027-.532 1.595q.447.427.8.937M3.86 3.658l-.532-1.595-.77 1.027.502 1.505q.352-.51.8-.937M8 3a5 5 0 0 0-5 5v5.5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5V8a5 5 0 0 0-5-5"/>
+      <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" style="margin-bottom: 20px ;" fill="currentColor" class="bi bi-person-raised-hand" viewBox="0 0 16 16">
+        <path d="M6 6.207v9.043a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H6.236a1 1 0 0 1-.447-.106l-.33-.165A.83.83 0 0 1 5 2.488V.75a.75.75 0 0 0-1.5 0v2.083c0 .715.404 1.37 1.044 1.689L5.5 5c.32.32.5.754.5 1.207"/>
+        <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
       </svg>
-      <h4>One of three columns</h4>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur nisi veritatis tempore rerum, vero facere, atque veniam ipsam vitae odit alias</p>
+      <h4>ინდივიდუალური
+        სასწავლო გეგმა</h4>
+      <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur nisi veritatis tempore rerum, vero facere, atque veniam ipsam vitae odit alias</p> -->
     </div>
     <div class="col-sm card lastAbCard">
-      <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-backpack3" viewBox="0 0 16 16">
-        <path d="M4.04 7.43a4 4 0 0 1 7.92 0 .5.5 0 1 1-.99.14 3 3 0 0 0-5.94 0 .5.5 0 1 1-.99-.14M4 9.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm1 .5v3h6v-3h-1v.5a.5.5 0 0 1-1 0V10z"/>
-        <path d="M6 2.341V2a2 2 0 1 1 4 0v.341c.465.165.904.385 1.308.653l.416-1.247a1 1 0 0 1 1.748-.284l.77 1.027a1 1 0 0 1 .15.917l-.803 2.407C13.854 6.49 14 7.229 14 8v5.5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5V8c0-.771.146-1.509.41-2.186l-.802-2.407a1 1 0 0 1 .15-.917l.77-1.027a1 1 0 0 1 1.748.284l.416 1.247A6 6 0 0 1 6 2.34ZM7 2v.083a6 6 0 0 1 2 0V2a1 1 0 1 0-2 0m5.941 2.595.502-1.505-.77-1.027-.532 1.595q.447.427.8.937M3.86 3.658l-.532-1.595-.77 1.027.502 1.505q.352-.51.8-.937M8 3a5 5 0 0 0-5 5v5.5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5V8a5 5 0 0 0-5-5"/>
+      <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" style="margin-bottom: 20px ;" fill="currentColor" class="bi bi-person-fill-check" viewBox="0 0 16 16">
+        <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+        <path d="M2 13c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4"/>
       </svg>
-      <h4>One of three columns</h4>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur nisi veritatis tempore rerum, vero facere, atque veniam ipsam vitae odit alias</p>
+      <h4>კონსულტაციები გამოცდილ პროფესიონალებთან</h4>
+      <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur nisi veritatis tempore rerum, vero facere, atque veniam ipsam vitae odit alias</p> -->
     </div>
   </div>
 
@@ -156,25 +157,27 @@
 
 
 </div>
-<div class="headText" style="display: flex; justify-content: center; align-items: center; margin-bottom: 40px;">
-  <h1 >About Us</h1>
+<hr style="margin-bottom: 0px;">
+<div class="headText" style="display: flex; justify-content: center; align-items: center; margin-bottom: 60px;">
+  <h1 >ჩვენს შესახებ</h1>
 </div>
 
 <div class="aboutClass">
   <div class="container">
     <img src="../../../assets/img/about.jpg" class="col-6 about_img" alt="">
     <div class="about_text col-6">
-      <h2 >Welcome To Elearning</h2>
-      <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non aperiam culpa aliquid! Repudiandae pariatur accusamus, mollitia, hic magnam facilis amet quasi repellendus officia ipsa quae officiis aliquid, placeat aliquam illum.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non aperiam culpa aliquid! Repudiandae pariatur accusamus, mollitia, hic magnam facilis amet quasi repellendus officia ipsa quae officiis aliquid, placeat aliquam illum.
+      <h2 >მენეჯმენტის სკოლა HAZEL</h2>
+      <h5 >მენეჯმენტის სკოლა Hazel  გთავაზობთ მენტორინგის პროგრამებს ისეთი საერთაშორისო ლიცენზიების  მოსაპოვებლად, როგორიცაა PMP (პროექტის მართვის პროფესიონალი) და PMI-ACP (PMI აკრედიტირებული ეჯაილ მეთოდოლოგიის სპეციალისტი). 
+        Hazel-ში ჩვენი, როგორც მენეჯმენტის გამოცდილი პროფესიონალების მიზანია, გავაზიაროთ ჩვენი ცოდნა და გამოცდილება, იმისათვის, რომ გარდავქმნათ მართვის გარემო და ხელი შევუწყოთ ადამიანებზე ორიენტირებული მართვის სტილის განვითარებას!
+        
       </h5>
-      <button type="button" class="btn btn-primary about_btn" [routerLink]="['/about']">Read More</button>
+      <button type="button" class="btn btn-primary about_btn" [routerLink]="['/about']">მეტის წაკითხვა</button>
     </div>
   </div>
 </div>
-
-<div class="headTextCou" style="display: flex; justify-content: center; align-items: center; margin-top: 40px;">
-  <h1 >Popular Courses</h1>
+<hr >
+<div class="headTextCou">
+  <h1 >პოპულარული კურსები</h1>
 </div>
 
 <div class="courses" style="display: flex; justify-content: center; align-items: center;"  >
@@ -185,7 +188,11 @@
           <img class="card-img-top" src="../../../assets/img/course-1.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">ნებისმიერი დარგის
+              პროფესიონალისათვის
+              რომელსაც აქვს პროექტზე
+              საპასუხისმგებლო პოზიციაზე
+              მუშაობის გამოცდილება</p>
             <a href="#" class="btn btn-primary couBtn">Go somewhere</a>
         </div>
 </div>
@@ -195,7 +202,11 @@
           <img class="card-img-top" src="../../../assets/img/course-2.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">ნებისმიერი დარგის
+              პროფესიონალისათვის
+              რომელსაც აქვს პროექტზე
+              საპასუხისმგებლო პოზიციაზე
+              მუშაობის გამოცდილება</p>
             <a href="#" class="btn btn-primary couBtn">Go somewhere</a>
           </div>
         </div>
@@ -205,7 +216,11 @@
         <img class="card-img-top" src="../../../assets/img/course-3.jpg" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">ნებისმიერი დარგის
+            პროფესიონალისათვის
+            რომელსაც აქვს პროექტზე
+            საპასუხისმგებლო პოზიციაზე
+            მუშაობის გამოცდილება</p>
           <a href="#" class="btn btn-primary couBtn" >Go somewhere</a>
       </div>
 </div>
@@ -213,10 +228,10 @@
     </div>
   </div>
 </div>
-
+<hr >
 
 <div class="headText" >
-  <h1 >Stuff</h1>
+  <h1 >გუნდი</h1>
 </div>
 
 <div class="container stuffCont"  >
@@ -225,7 +240,7 @@
       <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="../../../assets/img/mariami.png"  alt="Card image cap">
   <div class="card-body">
-    <h2>მარიამი</h2>
+    <h2 class="stuffName">მარიამი</h2>
     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
   </div>
 </div>
@@ -234,7 +249,7 @@
       <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="../../../assets/img/paata.png" alt="Card image cap">
   <div class="card-body">
-    <h2>პაატა</h2>
+    <h2 class="stuffName">პაატა</h2>
     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
   </div>
 </div>
@@ -243,7 +258,7 @@
       <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="../../../assets/img/antonina.png" alt="Card image cap">
   <div class="card-body">
-    <h2>ანტონინა</h2>
+    <h2 class="stuffName">ანტონინა</h2>
     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
   </div>
 </div>

@@ -38,20 +38,20 @@
 
 
 li.active a {
-    color: var(--light);
+    color: var(--lightText);
 }
 
 a{
     text-decoration: none;
     font-size: 20px;
     font-weight: 600;
-    color: var(--text);
+    color: var(--lightText);
     transition: color 0.3s, text-shadow 0.3s;
     outline: none;
 }
 a:hover {
-    color: var(--lightText);
-    text-shadow: var(--lightText); /* Add a subtle box shadow on hover */
+    transform: scale(1.1);
+    // transition: 0.5s;
     
 }
 .col-sm{

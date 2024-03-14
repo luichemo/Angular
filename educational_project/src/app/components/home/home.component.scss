@@ -20,10 +20,12 @@ a:hover {
 
 .caroules-wrapper {
     position: relative;
-
     margin: 0;
     overflow: hidden;
 
+}
+.gallery_img{
+    height: 100%;
 }
 
 .coruImage {
@@ -31,7 +33,7 @@ a:hover {
 
     max-height: 100vh;
     object-fit: cover;
-    filter: brightness(40%);
+    // filter: brightness(40%);
 }
 
 .gallery_description {
@@ -40,7 +42,7 @@ a:hover {
     left: 10%;
     right: 30%;
     z-index: 20;
-    color: var(--light);
+    color: var(--lightText);
     text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
     font-weight: 800;
 
@@ -67,7 +69,7 @@ a:hover {
 .email_btn {
     color:white;
     border-radius: none !important;
-    background-color: var(--background);
+    background-color: var(--text);
     border: none;
     font-size: 30px;
     margin-top: 20px;
@@ -86,7 +88,7 @@ a:hover {
 
     background-color: var(--lightText);
     border: none;
-    color: var(--background);
+    color: var(--text);
 }
 
 
@@ -153,6 +155,7 @@ a:hover {
 }
 
 .container {
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,6 +166,16 @@ a:hover {
 .about_img {
     height: 500px;
     width: 45%;
+    object-fit: cover;
+    border-radius:5px ;
+}
+hr{
+    width:80%; 
+    margin: auto; 
+    margin-bottom: 40px; 
+    color: var(--text);  
+    background-color: var(--text); 
+    height: 2px;
 }
 
 .about_btn {
@@ -194,18 +207,28 @@ a:hover {
     justify-content: center; 
     align-items: center; 
     margin-top: 40px;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
+}
+
+
+
+.headTextCou{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 
 
-
-
-
-
 .about_text h2{
-    margin-bottom:100px
+    color: var(--text);
+    margin-bottom:80px
+    
+}
+.aboutClass{
+    color: var(--primary);
 }
 
 
@@ -223,6 +246,7 @@ h1 {
     color: var(--background);
     font-family: 'Righteous', serif;
     font-size: 3rem;
+    margin-bottom: 0px;
     //   text-shadow: .05em .05em 0 var(--lightText);
 }
 
@@ -246,34 +270,16 @@ h1:after {
     animation: shad-anim 15s linear infinite;
 }
 
-
-h2 {
-    display: inline-block;
-    color: var(--background);
-    font-family: 'Righteous', serif;
-    font-size: 2rem;
-    text-shadow: .05em .05em 0 rgb(45, 128, 139);
+.stuffCard:hover h2{
+    transition: 0.5s;
+    color: var(--lightText);
 }
 
-h2:after {
-    content: attr(data-shadow);
-    position: absolute;
-    top: .06em;
-    left: .06em;
-    z-index: -1;
-    text-shadow: none;
-    background-image:
-        linear-gradient(45deg,
-            transparent 45%,
-            hsla(48, 20%, 90%, 1) 45%,
-            hsla(48, 20%, 90%, 1) 55%,
-            transparent 0);
-    background-size: .05em .05em;
-
-    -webkit-text-fill-color: transparent;
-
-    animation: shad-anim 15s linear infinite;
+.stuffCard h2{
+    text-shadow: white;
 }
+
+
 
 .modal-body {
     background-color: var(--lightText);
@@ -302,7 +308,10 @@ h2:after {
     transition: 0.5s;
     transform: scale(1.1);
 }
+
+
 @media only screen and (max-width: 1458px) {
+
     .description_date {
         font-size: large;
         margin-bottom: 20px;
@@ -340,17 +349,19 @@ h2:after {
   
 }
 @media only screen and (max-width: 992px) {
+
     .courses{
         margin-bottom: 300px;
     }
-    .couCard{
-        margin-top: 60px;
-    }
+
     .lastCard{
         margin-bottom: 20px;
     }
     .about_text h2{
         margin-bottom:20px
+    }
+    .couCard{
+        margin-bottom: 120px;
     }
     
   
@@ -359,6 +370,12 @@ h2:after {
 
 
 @media only screen and (max-width: 850px) {
+    .headText{
+        margin-bottom: 150px;
+    }
+    .gallery_img{
+        margin-top: 0;
+    }
     .container {
         display: block;
     }
@@ -373,14 +390,16 @@ h2:after {
     .about_text {
         width: 100%;
     }
+
     
     
 }
 
 @media only screen and (max-width: 770px) {
     .couCard{
-        margin-bottom: 150px;
+        margin-bottom: 200px;
     }
+
     .row[_ngcontent-ng-c2166648928] {
         margin-top: 3rem;
         margin-bottom: -18rem;
@@ -398,13 +417,8 @@ h2:after {
 
 @media only screen and (max-width: 460px){
     .couCard{
-        margin-bottom: 50px;
+        margin-bottom: 100px;
     }
     
 }
-@media only screen and (max-width: 448px){
-    .couCard{
-        margin-bottom: 70px;
-    }
-    
-}
+

@@ -1,5 +1,5 @@
 import { isPlatformBrowser, CommonModule } from '@angular/common';
-import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, HostListener, Inject, Input, PLATFORM_ID } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 export class NavBarComponent {
   showMenu: boolean = false;
 
+  
   constructor(@Inject(PLATFORM_ID) private platformId: any) {}
 
   ngOnInit() {
