@@ -1,5 +1,5 @@
 .bigList{
-    width: 119px;
+    width: 125px;
 }
 
 nav {
@@ -131,19 +131,14 @@ a:hover {
         z-index: 22;
        
         padding-right: 9%;
-        margin-top: 85vh;
+        margin-top: 75vh;
+
+    
 
     }
     .foLoText{
         color: var(--lightText);
-        display: block;
-        position: absolute;
-        right: 0;
-        z-index: 22;
        font-size: xx-large;
-        padding-right: 6%;
-        margin-top: 94vh;
-
     }
     
     nav{
@@ -162,6 +157,14 @@ a:hover {
         display: none;
 
     }
+}
+
+@media only screen and (min-width: 480px){
+    .footLogo{
+        padding-right: 5%;
+        margin-top: 85vh;
+    }
+
 }
 
 .nav-link.active {
