@@ -1,0 +1,120 @@
+nav{
+    background-color: black;
+    height: 125px;
+    width: 100%;
+}
+img.logo{
+    padding: 0 100px;
+}
+nav ul{
+    float: right;
+    padding: 0 100px ;
+    margin-top: 22.5px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding:7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,a:hover{
+    background-color: #ea9322;
+    transition: 0.5s;
+}
+.checkbtn{
+    position: absolute;
+    margin-bottom: 100px;
+    // margin-top: 37.5px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    padding: 0 100px;
+    cursor: pointer;
+    display: none;
+}
+.checkbtn2{
+    position: absolute;
+    margin-bottom: 100px;
+    // margin-top: 37.5px;
+    color: white;
+    // float: right;
+    // line-height: 80px;
+    // padding: 0 100px;
+    // cursor: pointer;
+    // display: none;
+}
+.login{
+    background-color: #848484;
+}
+.menuIcon{
+    display: none;
+}
+@media(max-width:1090px){
+    img.logo{
+        padding: 0 50px;
+    }
+    .checkbtn{
+        padding: 0 50px;
+    }
+    nav ul{
+
+        padding: 0 50px ;
+
+    }
+}
+@media(max-width:890px){
+    .menuIcon{
+        display: block;
+    }
+    .checkbtn{
+       
+        display: block;
+    }
+    nav ul{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -128%);
+        background-color: #ea9322;
+        width: 100%;
+        height: 100;
+    }
+    nav ul li{
+        display: block;
+        transition: 0.5s;
+        text-align: center;
+
+    }
+    a.active,a:hover{
+        background-color: black;
+        transition: 0.5s;
+    }
+    
+}
+@media only screen and (min-width: 850px){
+    // .bi-x{
+    //     display: none;
+    // }
+    // .bi-list{
+    //     display: none;
+
+    // }
+}
+
+@media(max-width:475px){
+    img.logo{
+        padding: 0 10px;
+    }
+    .checkbtn{
+
+        padding: 0 10px ;
+
+    }
+}

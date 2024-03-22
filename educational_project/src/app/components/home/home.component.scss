@@ -211,9 +211,14 @@ hr{
 }
 
 
-
+.headHeadTextCou{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .headTextCou{
-    margin-top: 40px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -279,7 +284,43 @@ h1:after {
     text-shadow: white;
 }
 
+.section-title {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+}
 
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 80px);
+    height: 2px;
+    top: 4px;
+    left: -40px;
+    background: var(--background);
+    z-index: -1;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: calc(100% + 120px);
+    height: 2px;
+    bottom: 5px;
+    left: -60px;
+    background: var(--background);
+    z-index: -1;
+}
+
+.section-title.text-start::before {
+    width: calc(100% + 40px);
+    left: 0;
+}
+
+.section-title.text-start::after {
+    width: calc(100% + 60px);
+    left: 0;
+}
 
 .modal-body {
     background-color: var(--lightText);
@@ -308,7 +349,12 @@ h1:after {
     transition: 0.5s;
     transform: scale(1.1);
 }
-
+#closeModal{
+    background-color:var(--lightText); color: var(--background); border: none;
+}
+#closeModal:hover{
+    background-color:var(--text); color: var(--lightText); border: none;
+}
 
 @media only screen and (max-width: 1458px) {
 

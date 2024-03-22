@@ -100,8 +100,7 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary"#closebutton data-dismiss="modal" style="border: none; float: left;" >დახურვა</button>
-        <button type="submit" class="btn btn-primary"   id="closeModal" (click)="send()"   style="background-color:var(--lightText); color: var(--background); border: none;">გაგზავნა</button>
+        <button type="button" class="btn btn-secondary"#closebutton data-dismiss="modal" >გაგზავნა</button>
       </div>
     </div>
   </div>
@@ -159,13 +158,15 @@
 </div>
 <hr style="margin-bottom: 0px;">
 <div class="headText" style="display: flex; justify-content: center; align-items: center; margin-bottom: 60px;">
-  <h1 >ჩვენს შესახებ</h1>
+  
+  <h1 ></h1>
 </div>
 
 <div class="aboutClass">
   <div class="container">
     <img src="../../../assets/img/about.jpg" class="col-6 about_img" alt="">
     <div class="about_text col-6">
+      <h6 class="section-title bg-white text-start pe-3" style="color: var(--background); margin-bottom: 15px;">ჩვენს შესახებ</h6>
       <h2 >მენეჯმენტის სკოლა HAZEL</h2>
       <h5 >მენეჯმენტის სკოლა Hazel  გთავაზობთ მენტორინგის პროგრამებს ისეთი საერთაშორისო ლიცენზიების  მოსაპოვებლად, როგორიცაა PMP (პროექტის მართვის პროფესიონალი) და PMI-ACP (PMI აკრედიტირებული ეჯაილ მეთოდოლოგიის სპეციალისტი). 
         Hazel-ში ჩვენი, როგორც მენეჯმენტის გამოცდილი პროფესიონალების მიზანია, გავაზიაროთ ჩვენი ცოდნა და გამოცდილება, იმისათვის, რომ გარდავქმნათ მართვის გარემო და ხელი შევუწყოთ ადამიანებზე ორიენტირებული მართვის სტილის განვითარებას!
@@ -176,7 +177,12 @@
   </div>
 </div>
 <hr >
+<div class="headHeadTextCou">
+  <h6 class="section-title bg-white text-center px-3" style="color: var(--background);">კუსრსები</h6>
+</div>
+
 <div class="headTextCou">
+  
   <h1 >პოპულარული კურსები</h1>
 </div>
 
@@ -193,7 +199,7 @@
               რომელსაც აქვს პროექტზე
               საპასუხისმგებლო პოზიციაზე
               მუშაობის გამოცდილება</p>
-            <a href="#" class="btn btn-primary couBtn">Go somewhere</a>
+            <a href="#" class="btn btn-primary couBtn" [routerLink]="['/courses']">კურსის ნახვა</a>
         </div>
 </div>
       </div>
@@ -207,7 +213,7 @@
               რომელსაც აქვს პროექტზე
               საპასუხისმგებლო პოზიციაზე
               მუშაობის გამოცდილება</p>
-            <a href="#" class="btn btn-primary couBtn">Go somewhere</a>
+            <a href="#" class="btn btn-primary couBtn" [routerLink]="['/courses']">კურსის ნახვა</a>
           </div>
         </div>
       </div>
@@ -221,7 +227,7 @@
             რომელსაც აქვს პროექტზე
             საპასუხისმგებლო პოზიციაზე
             მუშაობის გამოცდილება</p>
-          <a href="#" class="btn btn-primary couBtn" >Go somewhere</a>
+          <a href="#" class="btn btn-primary couBtn"  [routerLink]="['/courses']">კურსის ნახვა</a>
       </div>
 </div>
       </div>
