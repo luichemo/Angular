@@ -11,25 +11,46 @@ import { RouterModule } from '@angular/router';
 })
 export class NavBarComponent {
   constructor(@Inject(PLATFORM_ID) private platformId: any) {}
+  showMenu: boolean = false;
+
+  
+  
+
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
       this.checkScreenWidth();
     }
   }
-  checkScreenWidth() {
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
     if (isPlatformBrowser(this.platformId)) {
-      // Set showMenu based on screen width
-      this.showMenu = window.innerWidth > 850;
+      this.checkScreenWidth();
     }
   }
-  
-  activeLink: string = 'home';
-  showMenu: boolean = false;
+
+  @HostListener('window:scroll')
+  onScroll() {
+    if (isPlatformBrowser(this.platformId) && window.innerWidth <= 890) {
+      // Reset the menu to default position when scrolling
+      this.showMenu = false;
+    }
+  }
+
   toggleMenu() {
     this.showMenu = !this.showMenu;
   }
+
+  checkScreenWidth() {
+    if (isPlatformBrowser(this.platformId)) {
+      // Set showMenu based on screen width
+      this.showMenu = window.innerWidth > 890;
+    }
+  }
+  activeLink: string = 'home';
+
+
   isActive(link: string): boolean {
-    
     return this.activeLink === link;
   }
 }

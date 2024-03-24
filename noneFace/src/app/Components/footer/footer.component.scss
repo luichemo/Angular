@@ -1,0 +1,101 @@
+.footer{
+    height: auto;
+    background-color: var(--background);
+}
+h3{
+    font-size: 25px;
+}
+h3,p{
+    color: var(--secondary-color);
+}
+.footer-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+}
+.footRow{
+    gap: 50px;
+}
+.footclass{
+    max-width: 100px;
+
+}
+.footclass li{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footclass ul{
+    padding-right: 2rem;
+    text-align: start;
+    
+    
+}
+.footclass ul h3{
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+
+li.active a {
+    color: var(--text);
+}
+
+a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--lightText);
+    transition: color 0.3s, text-shadow 0.3s;
+    outline: none;
+}
+a:hover {
+    transform: scale(1.1);
+    // transition: 0.5s;
+    
+}
+.col-sm{
+    margin: auto;
+    min-width: 250px !important;
+    height: 250px;
+    width: 90%;
+    
+    
+}
+.row{
+    
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    gap: 50px;
+    
+}
+
+.autor{
+    right: 0;
+    display: flex;
+}
+.Ri{
+    display: flex;
+    justify-content: flex-end;
+}
+.footclass{
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 850px){
+    .autor{
+        display: block;
+    }
+    .Ri{
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+}

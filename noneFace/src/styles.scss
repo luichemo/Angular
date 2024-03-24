@@ -1,5 +1,5 @@
 h1 {
-    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial black", "sans serif";
     font-size: 24px;
     font-style: normal;
     font-variant: normal;
@@ -8,7 +8,7 @@ h1 {
 }
 
 h3 {
-    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial black", "sans serif";
     font-size: 14px;
     font-style: normal;
     font-variant: normal;
@@ -17,7 +17,7 @@ h3 {
 }
 
 p {
-    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial black", "sans serif";
     font-size: 14px;
     font-style: normal;
     font-variant: normal;
@@ -26,7 +26,7 @@ p {
 }
 
 blockquote {
-    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial black", "sans serif";
     font-size: 21px;
     font-style: normal;
     font-variant: normal;
@@ -35,7 +35,7 @@ blockquote {
 }
 
 pre {
-    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial black", "sans serif";
     font-size: 13px;
     font-style: normal;
     font-variant: normal;
@@ -48,8 +48,25 @@ pre {
     padding: 0;
     text-decoration: none;
     list-style:none ;
-    
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+
+:root {
+    --primary-color: black;
+    --primary-color-light: #1f2125;
+    --primary-color-extra-light: #35373b;
+    --secondary-color: #ea9322;
+    --secondary-color-dark: #d79447;
+    --text-light: #d1d5db;
+    --white: #ffffff;
+    --max-width: 1200px;
+  }
+  a{
+    text-decoration: none;
 }
 
   
