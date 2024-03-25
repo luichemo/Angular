@@ -26,6 +26,7 @@ h3,p{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--primary-color-extra-light);
 }
 .footclass ul{
     padding-right: 2rem;
@@ -50,14 +51,14 @@ li.active a {
 a{
     text-decoration: none;
     font-size: 20px;
-    font-weight: 600;
-    color: var(--lightText);
+    
+    color: var(--primary-color-extra-light);
     transition: color 0.3s, text-shadow 0.3s;
     outline: none;
 }
 a:hover {
     transform: scale(1.1);
-    // transition: 0.5s;
+    color: var(--white);
     
 }
 .col-sm{

@@ -31,7 +31,7 @@ export class NavBarComponent {
 
   @HostListener('window:scroll')
   onScroll() {
-    if (isPlatformBrowser(this.platformId) && window.innerWidth <= 890) {
+    if (isPlatformBrowser(this.platformId) && window.innerWidth <= 997) {
       // Reset the menu to default position when scrolling
       this.showMenu = false;
     }
@@ -44,7 +44,7 @@ export class NavBarComponent {
   checkScreenWidth() {
     if (isPlatformBrowser(this.platformId)) {
       // Set showMenu based on screen width
-      this.showMenu = window.innerWidth > 890;
+      this.showMenu = window.innerWidth > 997;
     }
   }
   activeLink: string = 'home';

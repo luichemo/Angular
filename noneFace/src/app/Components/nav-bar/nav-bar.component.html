@@ -1,4 +1,6 @@
 <nav>
+    <div class="d-flex">
+    <img src="../../../assets/N.png" alt="logo" height="125px" class="logo">
     <div class="menuIcon" (click)="toggleMenu()">
         <span  for="chack" class="checkbtn2" *ngIf="showMenu">
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
@@ -13,7 +15,8 @@
               </svg>
         </span>
         </div>
-    <img src="../../../assets/N-removebg-preview.png" alt="logo" height="125px" class="logo">
+    </div>
+    
     
     <ul *ngIf="showMenu"> 
         <li><a href="" [routerLink]="['/home'] "[routerLinkActive]="['active']">HOME</a></li>
