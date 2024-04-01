@@ -31,7 +31,7 @@ export class NavBarComponent {
 
   @HostListener('window:scroll')
   onScroll() {
-    if (isPlatformBrowser(this.platformId) && window.innerWidth <= 997) {
+    if (isPlatformBrowser(this.platformId) && window.innerWidth < 997) {
       // Reset the menu to default position when scrolling
       this.showMenu = false;
     }

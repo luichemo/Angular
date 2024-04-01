@@ -1,21 +1,101 @@
 
-.landingPageContent{
+.nonefaceText{
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .headerText{
   text-align: center;
+  width: 100%;
 }
+
+
+
+.pluses{
+  display: flex;
+  justify-content: center;
+  align-content: center;  
+  width: 80%;
+  margin: auto;
+}
+.pluses .row{
+ margin-top: 60px;
+ gap: 50px;
+ color: var(--white);
+ margin-bottom: 60px;
+}
+.pluses .col{
+  border: solid 1px var(--secondary-color);
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 8px;
+  padding-right: 30px;
+  padding-left: 30px;
+  cursor: default;
+ }
+ .pluses .col:hover{
+  background-color: var(--primary-color-extra-light);
+  transition: 0.5s;
+  // border: solid 2px ;
+  color: var(--secondary-color);
+  h1{
+    color: var(--white);
+    transition: 0.5s;
+  }
+ }
+ 
+ .pluses .col h1{
+  font-weight: 100;
+  margin-bottom: 30px;
+  font-size: 40px;
+  line-height: 40px;
+  color: var(--secondary-color);
+ }
+ .pluses .col h3{
+  font-weight: 100;
+  font-size: 30px;
+  line-height: 30px;
+ }
+
+
+
 .headerText h1{
   font-size: 150px;
   font-weight: 150;
   line-height: 150px;
   color: var(--white);
 }
+.headerText h2{
+  font-size: 70px;
+  font-weight: 70;
+  line-height: 70px;
+  color: var(--white);
+  display: none;
+}
 .headerText h3{
   color: var(--secondary-color);
   font-size: 30px;
   font-weight: 30;
   line-height: 30px;
+}
+@media(max-width:1399px){
+
+
+}
+
+
+
+@media(max-width:600px){
+  .headerText h1{
+    display: none;
+  }
+  .headerText h2{
+    margin-top: 10px;
+    display: block;
+    margin-bottom: 30px;
+  }
 }
