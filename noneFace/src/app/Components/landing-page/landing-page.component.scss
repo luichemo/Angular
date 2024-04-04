@@ -37,7 +37,7 @@
   line-height: 30px;
   width: 175px;
   margin: auto;
-  color: var(--white);
+  color: var(--sexy-color);
   font-weight: 100;
 }
 .pluses{
@@ -91,7 +91,7 @@
   padding-bottom: 30px;
   width: 1300px;
   margin: auto;
-  color: var(--white);
+  color: var(--sexy-color);
   font-weight: 100;
   font-size: 30px;
   line-height: 30px;
@@ -152,9 +152,11 @@
   justify-content: center;
   align-items: center;
   color: var(--sexy-color);
-  
+  border: solid 5px var(--primary-color-extra-light);
+  border-radius: 8px;
   width: 1310px;
   margin: auto;
+  margin-bottom: 100px;
 
 }
 .subscription .row {
@@ -165,9 +167,10 @@
   color: var(--sexy-color);
 }
 .subscription h1 {
-  color: var(--white);
+  color: var(--sexy-color);
   font-weight: 100;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
+  
 }
 .bi{
   cursor: pointer;
@@ -176,8 +179,29 @@
   padding-right: 20px;
   width: 200px;
   height: 200px;
-  border: solid 2px var(--sexy-color) ;
+  
   border-radius: 50%;
+}
+.bi-wifi-1{
+  color: #CD7F32;
+  border: solid 2px #CD7F32; 
+}
+.BRONZE h1{
+  color: #CD7F32;
+}
+.bi-wifi-2{
+  color: #C0C0C0;
+  border: solid 2px  #C0C0C0; 
+}
+.SILVER h1{
+  color:  #C0C0C0;
+}
+.bi-wifi{
+  color: #FFD700;
+  border: solid 2px  #FFD700; 
+}
+.GOLD h1{
+  color:  #FFD700;
 }
 @media(max-width:752px) and (min-width:745px){
   .big3{
@@ -200,16 +224,18 @@
   }
 }
 
-@media(max-width:1399px){
-  .pluses {
-    display: block;
-    
-  }
-}
 
 @media(max-width:1399px){
+  .subscription{
+    width: 87%;
+  }
+  .subscription .row{
+    gap: 80px;
+
+  }
   .pluses{
     width: 88%;
+    display: block;
   }
   .bars{   
     width: 90%;
@@ -220,6 +246,12 @@
 }
 
 
+@media(max-width:1175px){
+  .subscription .row{
+    gap: 20px;
+
+  }
+}
 
 
 
@@ -233,7 +265,9 @@
     font-weight: 80;
     line-height: 80px;
   }
-
+  .subscription{
+    width: 85%;
+  }
 }
 
 @media(max-width:415px){
