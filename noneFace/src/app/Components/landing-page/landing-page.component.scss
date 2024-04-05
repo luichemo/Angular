@@ -100,23 +100,35 @@
 .bars{
   
   display: flex;
-  
+  flex-wrap: wrap;
   padding-left: 20px;
   padding-right: 20px;
   width: 1350px;
   margin: auto;
+
+}
+.bar .row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col-4{
+  min-width: 255px;
+
 }
 
 .barsText{
   border: solid 2px var(--secondary-color);
   border-radius:8px;
   margin-bottom: 20px;
+  // min-width: 255px;
  
 }
 .barCard{
   background-color: black;
   color: var(--white);
   font-weight: 100;
+  // min-width: 255px;
 }
 .row .col:hover{
   transform: scale(1.1);
@@ -126,6 +138,7 @@
   background-color: var(--secondary-color);
   margin-top: 20px;
   display: flex;
+  word-wrap: none;
   justify-content: center;
   align-items: center;
   text-wrap: none;
@@ -144,7 +157,7 @@
 }
 
 .card-img-top{
-  height: 110px;
+  height: 215px;
 }
 
 .subscription{
@@ -203,25 +216,26 @@
 .GOLD h1{
   color:  #FFD700;
 }
-@media(max-width:752px) and (min-width:745px){
-  .big3{
-    height: 210px;
+
+@media (max-width:933px){
+  .card-img-top{
+    height:150px;
+    
   }
-}
-@media(max-width:1119px) and (min-width:933px){
-  .big1{
-    height:auto;
+  .bars .row {
+    width: 100%;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    // margin: auto;
+    // padding-right: 10%;
+    
   }
-}
-@media(max-width:936px) and (min-width:745px){
-  .big1{
-    height: 210px;
+  .bars{
+    padding-right: 0;
+    padding-left: 30px;
   }
-}
-@media(max-width:936px) and (min-width:745px){
-  .big2{
-    height: 210px;
-  }
+ 
 }
 
 
