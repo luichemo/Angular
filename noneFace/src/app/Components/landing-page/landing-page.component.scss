@@ -169,6 +169,7 @@
   border-radius: 8px;
   width: 1310px;
   margin: auto;
+  padding-bottom: 20px;
   margin-bottom: 100px;
 
 }
@@ -217,6 +218,9 @@
   color:  #FFD700;
 }
 
+.price{
+  margin-bottom: 0; font-size: 60px; line-height: 60px; margin-top: 40px;
+}
 
 
 @media (max-width:933px){
