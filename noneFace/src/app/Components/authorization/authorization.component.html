@@ -1,2 +1,56 @@
 <hr>
-<p>authorization works!</p>
+
+<div class="loginContent">
+    <mat-card>
+        <mat-card-content>
+            <div class="header">
+                <P>Sign Into NoneFace </P>
+            </div>
+            <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
+                <div class="emailInput">
+                <mat-form-field  appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input
+                    class="email"
+                    formControlName="email"
+                    matInput
+                    placeholder="Enter email address" required
+                    />
+                    <mat-error *ngIf="!loginForm.controls['email'].valid">
+                        Email is required
+                    </mat-error>
+                </mat-form-field>
+                </div>
+
+                <div>
+                
+                <mat-form-field  appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input formControlName="password" matInput [type]=" hide ? 'password' : 'text'" required />
+                    <button style="color: var(--sexy-color); opacity: 0.5;"  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide Password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>
+                        {{hide ? 'visibility_off' : 'visibility'}}
+                    </mat-icon>
+                    
+                </button>
+                
+                <mat-error *ngIf="!loginForm.get('password')?.valid">
+                    Password is required
+                </mat-error>
+                </mat-form-field>
+                
+                <span style="float: right;">
+                    <a  class="text-link" class="aLink">Forgot Password?</a>
+                </span>
+                </div>
+                
+                <button class="logBtn" mat-flat-button>LOG IN</button>
+            </form>
+
+            <div class="button-row">
+                <a>Create New Account</a>
+            </div>         
+        </mat-card-content>
+    </mat-card>
+</div>

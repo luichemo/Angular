@@ -1,0 +1,89 @@
+
+.loginContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+mat-card{
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    background-color:var(--primary-color-extra-light);
+    color: var(--sexy-color);
+    border: solid 3px var(--secondary-color);
+    padding: 50px;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.header p{
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+mat-form-field{
+    display: flex;
+    // min-width: 200px;
+    margin-top: 10px;
+    color: white;
+    
+}
+mat-form-field input{
+    border: solid 1px var(--secondary-color);
+
+}
+form .logBtn{
+    padding: 25px;
+    margin-top: 50px;
+    line-height: 25px;
+    font-size: 25px;
+    background-color: var(--secondary-color);
+    display: flex;
+    float: center;
+    color: var(--primary-color-extra-light);
+    
+}
+form .logBtn:hover{
+    
+    background-color: var(--white);
+    color: var(--primary-color-extra-light);
+    transition: 0.5s;
+}
+.button-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.button-row a{
+    color: var(--sexy-color);
+    margin-top: 50px;
+    cursor: pointer;
+}
+.button-row a:hover{
+    color: white;
+    transition: 0.5s;
+}
+.aLink{
+    color: var(--secondary-color); opacity: 0.5; cursor: pointer;
+}
+.aLink:hover{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+@media  screen and (max-width: 450px) {
+    mat-card{
+        padding: 0;
+    }
+}
